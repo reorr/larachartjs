@@ -59,7 +59,7 @@
                     $.get(url, function(response){
                         response.forEach(function(data){
                             Distro.push(data.favdistro);
-                            Vote.push(data.jumlahVote);
+                            Vote.push(data.jumlahvote);
                         });
                         var ctx = document.getElementById("canvas").getContext('2d');
                             var myChart = new Chart(ctx, {

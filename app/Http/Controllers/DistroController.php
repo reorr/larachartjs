@@ -45,7 +45,7 @@ class DistroController extends Controller
     public function chart()
     {
         $result = \DB::table('distros')
-                        ->select(\DB::raw('count(*) as jumlahVote, favdistro'))
+                        ->select(\DB::raw('count(*) as jumlahvote, favdistro'))
                         // ->where('status', '<>', 1)
                         ->groupBy('favdistro')
                         ->get();
