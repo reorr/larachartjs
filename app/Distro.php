@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Distro extends Model
 {
-    protected $fillable = ['favDistro'];
+    protected $fillable = ['favdistro'];
 }

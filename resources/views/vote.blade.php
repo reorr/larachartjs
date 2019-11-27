@@ -21,19 +21,19 @@
                         <div class="form-group">
                             <label for="distro">Pilih Distro Favoritmu:</label>
                             <div class="radio">
-                                <label><input type="radio" name="favDistro" value="Ubuntu">Ubuntu</label>
+                                <label><input type="radio" name="favdistro" value="Ubuntu">Ubuntu</label>
                                 <br />
-                                <label><input type="radio" name="favDistro" value="Arch Linux">Arch Linux</label>
+                                <label><input type="radio" name="favdistro" value="Arch Linux">Arch Linux</label>
                                 <br />
-                                <label><input type="radio" name="favDistro" value="Manjaro">Manjaro</label>
+                                <label><input type="radio" name="favdistro" value="Manjaro">Manjaro</label>
                                 <br />
-                                <label><input type="radio" name="favDistro" value="elementary OS">elementary OS</label>
+                                <label><input type="radio" name="favdistro" value="elementary OS">elementary OS</label>
                                 <br />
-                                <label><input type="radio" name="favDistro" value="Pop! OS">Pop! OS</label>
+                                <label><input type="radio" name="favdistro" value="Pop! OS">Pop! OS</label>
                                 <br />
-                                <label><input type="radio" name="favDistro" value="Linux Mint">Linux Mint</label>
+                                <label><input type="radio" name="favdistro" value="Linux Mint">Linux Mint</label>
                                 <br />
-                                <label><input type="radio" name="favDistro" value="Debian">Debian</label>
+                                <label><input type="radio" name="favdistro" value="Debian">Debian</label>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Vote</button>
@@ -58,7 +58,7 @@
                 $(document).ready(function(){
                     $.get(url, function(response){
                         response.forEach(function(data){
-                            Distro.push(data.favDistro);
+                            Distro.push(data.favdistro);
                             Vote.push(data.jumlahVote);
                         });
                         var ctx = document.getElementById("canvas").getContext('2d');

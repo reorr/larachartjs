@@ -15,7 +15,7 @@ class CreateDistrosTable extends Migration
     {
         Schema::create('distros', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('favDistro');
+            $table->string('favdistro');
             $table->timestamps();
         });
     }

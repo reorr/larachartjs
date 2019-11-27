@@ -36,7 +36,7 @@ class DistroController extends Controller
     public function store(Request $request)
     {
         $distro = new Distro([
-            'favDistro' => $request->get('favDistro'),
+            'favdistro' => $request->get('favdistro'),
         ]);
         $distro->save();
         return redirect('/');
@@ -45,9 +45,9 @@ class DistroController extends Controller
     public function chart()
     {
         $result = \DB::table('distros')
-                        ->select(\DB::raw('count(*) as jumlahVote, favDistro'))
+                        ->select(\DB::raw('count(*) as jumlahVote, favdistro'))
                         // ->where('status', '<>', 1)
-                        ->groupBy('favDistro')
+                        ->groupBy('favdistro')
                         ->get();
         return response()->json($result);
     }
