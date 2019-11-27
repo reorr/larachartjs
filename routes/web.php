@@ -11,6 +11,10 @@
 |
 */
 
+if (App::environment('production')) {
+    URL::forceScheme('https');
+}
+
 Route::get('/', 'DistroController@index');
 Route::post('vote','DistroController@store');
 Route::get('chart','DistroController@chart');
